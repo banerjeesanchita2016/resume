@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sanchitaa Banerjee | Executive Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        body { 
+            font-family: 'Inter', sans-serif; 
+            background-color: #f8fafc;
+            color: #1e293b;
+        }
+        .bento-card {
+            background: white;
+            border: 1px solid #e2e8f0;
+            border-radius: 1.5rem;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+        }
+        @media (hover: hover) {
+            .bento-card:hover {
+                border-color: #3b82f6;
+                transform: translateY(-4px);
+                box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+            }
+        }
+        .accent-gradient {
+            background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+        }
+
+        /* Portrait PDF Logic */
+        @media print {
+            @page { size: A4 portrait; margin: 1cm; }
+            body { background: white !important; padding: 0 !important; }
+            .no-print { display: none !important; }
+            .main-layout-grid { 
+                display: flex !important;
+                flex-direction: column !important;
+                gap: 1.25rem !important;
+            }
+            .bento-card {
+                box-shadow: none !important;
+                border: 1px solid #e2e8f0 !important;
+                page-break-inside: avoid !important;
+                padding: 1.5rem !important;
+            }
+        }
+    </style>
+</head>
+<body class="p-4 md:p-10 lg:p-16 min-h-screen flex items-center justify-center">
+
+    <div class="max-w-6xl w-full mx-auto">
+        <header class="flex flex-col md:flex-row justify-between items-center mb-10 animate__animated animate__fadeInDown">
+            <div class="flex items-center gap-6">
+                <div class="relative group">
+                    <div id="photo-frame" class="w-24 h-24 md:w-28 md:h-28 rounded-full border-4 border-white shadow-xl overflow-hidden shrink-0 bg-slate-200 flex items-center justify-center">
+                        <img id="profile-img" src="" class="hidden w-full h-full object-cover">
+                        <i id="placeholder-icon" data-lucide="user" class="w-10 h-10 text-slate-400"></i>
+                    </div>
+                    <label class="no-print absolute bottom-0 right-0 bg-blue-600 text-white p-1.5 rounded-full cursor-pointer shadow-lg hover:bg-blue-700 transition">
+                        <i data-lucide="camera" class="w-4 h-4"></i>
+                        <input type="file" class="hidden" id="imageInput" accept="image/*">
+                    </label>
+                </div>
+
+                <div>
+                    <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight text-slate-900">
+                        Sanchitaa <span class="text-blue-600">Banerjee</span>
+                    </h1>
+                    <p class="text-lg text-slate-500 font-medium mt-1">Virtual Assistant & KYC Documentation Specialist</p>
+                </div>
+            </div>
+
+            <div class="flex flex-col items-center md:items-end gap-3 mt-6 md:mt-0">
+                <button onclick="window.print()" class="no-print mb-2 bg-slate-900 text-white px-5 py-2 rounded-xl text-sm font-bold flex items-center gap-2 hover:bg-blue-600 transition shadow-lg">
+                    <i data-lucide="printer" class="w-4 h-4"></i> Save as PDF
+                </button>
+                <div class="flex flex-wrap justify-center md:justify-end gap-3 text-sm font-bold">
+                    <span class="flex items-center gap-1.5 bg-white text-blue-700 px-4 py-2 rounded-full border border-blue-100 shadow-sm">
+                        <i data-lucide="phone" class="w-4 h-4"></i> +971 58 588 6519
+                    </span>
+                    <span class="flex items-center gap-1.5 bg-white text-slate-700 px-4 py-2 rounded-full border border-slate-200 shadow-sm">
+                        <i data-lucide="mail" class="w-4 h-4"></i> banerjeesanchita2016@gmail.com
+                    </span>
+                </div>
+            </div>
+        </header>
+
+        <div class="main-layout-grid grid grid-cols-1 md:grid-cols-12 gap-6">
+            
+            <div class="md:col-span-4 bento-card p-8 flex flex-col justify-center animate__animated animate__fadeInLeft">
+                <div class="w-12 h-12 bg-blue-50 text-blue-600 rounded-2xl flex items-center justify-center mb-6">
+                    <i data-lucide="user-check" class="w-6 h-6"></i>
+                </div>
+                <h2 class="text-2xl font-bold text-slate-900 mb-4">Executive Profile</h2>
+                <p class="text-slate-600 leading-relaxed font-medium">
+                    Operations and administrative professional with over 15 years of experience supporting documentation-heavy processes, banking operations, and internal reporting. Known for extreme accuracy and reliable execution in high-volume environments.
+                </p>
+                <div class="mt-8 pt-6 border-t border-slate-100">
+                    <div class="flex justify-between text-sm mb-2">
+                        <span class="font-bold text-slate-400 uppercase tracking-widest">Accuracy & Quality</span>
+                        <span class="text-blue-600 font-bold">100%</span>
+                    </div>
+                    <div class="w-full bg-slate-100 h-2 rounded-full overflow-hidden">
+                        <div class="accent-gradient h-full w-full"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="md:col-span-5 bento-card p-8 animate__animated animate__fadeInUp">
+                <h2 class="text-2xl font-bold text-slate-900 mb-8 flex items-center gap-3">
+                    <i data-lucide="zap" class="text-amber-500 w-6 h-6"></i> Core Expertise
+                </h2>
+                <div class="space-y-6">
+                    <div class="flex gap-5">
+                        <div class="shrink-0 w-12 h-12 bg-slate-50 border rounded-2xl flex items-center justify-center text-blue-600 shadow-sm">
+                            <i data-lucide="database" class="w-6 h-6"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-slate-800">Data & MIS Management</h4>
+                            <p class="text-sm text-slate-500 mt-1">Specialist in Excel trackers, data cleansing, and sophisticated MIS reporting for business intelligence.</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-5">
+                        <div class="shrink-0 w-12 h-12 bg-slate-50 border rounded-2xl flex items-center justify-center text-emerald-600 shadow-sm">
+                            <i data-lucide="shield-check" class="w-6 h-6"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-slate-800">KYC & Compliance</h4>
+                            <p class="text-sm text-slate-500 mt-1">Meticulous verification of customer documentation and banking records to ensure full regulatory compliance.</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-5">
+                        <div class="shrink-0 w-12 h-12 bg-slate-50 border rounded-2xl flex items-center justify-center text-purple-600 shadow-sm">
+                            <i data-lucide="layers" class="w-6 h-6"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-slate-800">Operational Admin</h4>
+                            <p class="text-sm text-slate-500 mt-1">Managing CRM systems, professional scheduling, and maintaining audit-ready confidential records.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="md:col-span-3 flex flex-col gap-6 animate__animated animate__fadeInRight">
+                <div class="bento-card p-6">
+                    <h3 class="text-xs font-black uppercase tracking-[0.2em] text-slate-400 mb-5">Tech Toolkit</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1.5 bg-slate-50 border text-slate-700 rounded-lg text-xs font-bold">Advanced Excel</span>
+                        <span class="px-3 py-1.5 bg-slate-50 border text-slate-700 rounded-lg text-xs font-bold">CRM Systems</span>
+                        <span class="px-3 py-1.5 bg-slate-50 border text-slate-700 rounded-lg text-xs font-bold">Google Workspace</span>
+                        <span class="px-3 py-1.5 bg-slate-50 border text-slate-700 rounded-lg text-xs font-bold">Audit Tools</span>
+                    </div>
+                </div>
+
+                <div class="accent-gradient p-8 rounded-[1.5rem] text-white flex-1 flex flex-col justify-between shadow-xl shadow-blue-200">
+                    <div>
+                        <h2 class="text-4xl font-black mb-1 italic">15+</h2>
+                        <p class="text-blue-100 text-xs font-bold uppercase tracking-widest mb-6">Years Experience</p>
+                        <p class="text-sm opacity-90 leading-relaxed font-medium">
+                            Extensive background in Banking, FM, and Audit across UAE and India.
+                        </p>
+                    </div>
+                    <a href="mailto:banerjeesanchita2016@gmail.com" class="mt-8 w-full bg-white text-blue-700 py-4 rounded-2xl font-extrabold text-sm text-center shadow-lg hover:bg-blue-50 transition no-print">
+                        Hire Me
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        lucide.createIcons();
+
+        // Image Upload Script
+        const imageInput = document.getElementById('imageInput');
+        const profileImg = document.getElementById('profile-img');
+        const placeholderIcon = document.getElementById('placeholder-icon');
+
+        imageInput.addEventListener('change', function() {
+            const file = this.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    profileImg.src = e.target.result;
+                    profileImg.classList.remove('hidden');
+                    placeholderIcon.classList.add('hidden');
+                }
+                reader.readAsDataURL(file);
+            }
+        });
+    </script>
+</body>
+</html>
